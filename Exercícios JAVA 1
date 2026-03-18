@@ -1,0 +1,208 @@
+/*
+ ex1
+public class main {
+    public static void main(String[] args) {
+
+        for (int a = 0; a <= 100; a += 2) {
+            System.out.println(a);
+        }
+
+    }
+}
+*/
+/* 
+  ex2
+public class main {
+    public static void main(String[] args) {
+
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+
+    }
+}
+*/
+
+/*
+ ex3 
+public class main {
+    public static void main(String[] args){
+
+        int numero = 7;
+        
+        for (int i=1; i<=10; i++){
+                System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+}
+*/
+/*
+ ex4 
+public class Main {
+    public static void main(String[] args) {
+
+        int soma = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            soma += i; // soma = soma + i
+        }
+
+        System.out.println("A soma de 1 até 100 é: " + soma);
+    }
+}
+*/
+/*
+ ex5
+ public class Main {
+    public static void main(String[] args) {
+
+        int numero1 = 15;
+        int numero2 = 27;
+
+        if (numero1 > numero2) {
+            System.out.println("O maior número é: " + numero1);
+        } else if (numero2 > numero1) {
+            System.out.println("O maior número é: " + numero2);
+        } else {
+            System.out.println("Os números são iguais: " + numero1);
+        }
+
+    }
+}
+*/
+/*
+ ex6
+ public class Main {
+    public static void main(String[] args) {
+
+        int idade = 25; // aqui você coloca a idade
+
+        if (idade < 0) {
+            System.out.println("Idade inválida");
+        } else if (idade <= 12) {
+            System.out.println("Criança");
+        } else if (idade <= 17) {
+            System.out.println("Adolescente");
+        } else if (idade <= 59) {
+            System.out.println("Adulto");
+        } else {
+            System.out.println("Idoso");
+        }
+
+    }
+}
+*/
+/*
+ ex7
+ import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Menu:");
+        System.out.println("1 - Cadastrar");
+        System.out.println("2 - Listar");
+        System.out.println("3 - Sair");
+        System.out.print("Escolha uma opção: ");
+        int opcao = sc.nextInt();
+
+        switch (opcao) {
+            case 1:
+                System.out.println("Você escolheu Cadastrar");
+                break;
+            case 2:
+                System.out.println("Você escolheu Listar");
+                break;
+            case 3:
+                System.out.println("Você escolheu Sair");
+                break;
+            default:
+                System.out.println("Opção inválida!");
+        }
+
+        sc.close();
+    }
+}
+ */
+/*
+ ex8
+ public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Contagem regressiva:");
+
+        for (int i = 10; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}
+ */
+/*
+ ex9
+ public class Main {
+    public static void main(String[] args) {
+
+        double nota1 = 65;
+        double nota2 = 80;
+
+        double media = (nota1 + nota2) / 2;
+
+        System.out.println("Média: " + media);
+
+        if (media >= 70) {
+            System.out.println("Aprovado");
+        } else if (media >= 50) {
+            System.out.println("Recuperação");
+        } else {
+            System.out.println("Reprovado");
+        }
+
+    }
+}
+  */
+/*
+ ex10 
+ import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int opcao;
+
+        do {
+            // Mostra o menu
+            System.out.println("Menu:");
+            System.out.println("1 - Mostrar 'Ola'");
+            System.out.println("2 - Mostrar 'Bem-vindo'");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opcao: ");
+            opcao = sc.nextInt();
+
+            // Avalia a opção escolhida
+            switch (opcao) {
+                case 1:
+                    System.out.println("Olá");
+                    break;
+                case 2:
+                    System.out.println("Bem-vindo");
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+
+            System.out.println(); // linha em branco para melhorar a visualização
+
+        } while (opcao != 0); // repete enquanto a opção não for 0
+
+        sc.close();
+    }
+}
+*/
