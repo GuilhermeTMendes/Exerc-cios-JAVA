@@ -1,0 +1,89 @@
+import java.util.*;
+
+public class ProvaCompleta {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // =========================
+        // QUESTÃO 1 – Reorganizar Dígitos
+        // =========================
+        int num = 4213;
+        char[] digitos = String.valueOf(num).toCharArray();
+        Arrays.sort(digitos);
+
+        String resultado = "";
+        for (int i = digitos.length - 1; i >= 0; i--) {
+            resultado += digitos[i];
+        }
+        System.out.println("Q1 Resultado: " + resultado);
+
+        // =========================
+        // QUESTÃO 2 – Elementos Únicos
+        // =========================
+        int[] array = {1,2,2,3,4,4};
+        Set<Integer> unico = new LinkedHashSet<>();
+
+        for(int n : array) {
+            unico.add(n);
+        }
+        System.out.println("Q2 Resultado: " + unico);
+
+        // =========================
+        // QUESTÃO 3 – Palíndromo
+        // =========================
+        String texto = "renner";
+        String invertido = "";
+
+        for(int i = texto.length() - 1; i >= 0; i--) {
+            invertido += texto.charAt(i);
+        }
+
+        if(texto.equals(invertido)) {
+            System.out.println("Q3: É PALÍNDROMO!");
+        } else {
+            System.out.println("Q3: NÃO É PALÍNDROMO!");
+        }
+
+        // =========================
+        // QUESTÃO 4 – Fibonacci
+        // =========================
+        System.out.print("Digite N para Fibonacci: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1;
+        System.out.print("Q4: ");
+        for(int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        System.out.println();
+
+        // =========================
+        // QUESTÃO 5 – Números Amigáveis
+        // =========================
+        int num1 = 220;
+        int num2 = 284;
+
+        if (somaDivisores(num1) == num2 && somaDivisores(num2) == num1) {
+            System.out.println("Q5: São números amigáveis!");
+        } else {
+            System.out.println("Q5: Não são amigáveis.");
+        }
+
+        sc.close();
+    }
+
+    // Método auxiliar da questão 5
+    static int somaDivisores(int num) {
+        int soma = 0;
+        for(int i = 1; i < num; i++) {
+            if(num % i == 0) {
+                soma += i;
+            }
+        }
+        return soma;
+    }
+}
