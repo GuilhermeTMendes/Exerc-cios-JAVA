@@ -1,0 +1,319 @@
+public class Lista3 {
+    public static void main(String[] args) {
+
+        // =========================
+        // EXERCÍCIO 1
+        // =========================
+        Produto1 p1 = new Produto1("Notebook", 3500);
+        p1.exibir();
+
+        // =========================
+        // EXERCÍCIO 2
+        // =========================
+        Aluno2 a2 = new Aluno2("Gui", 18);
+        System.out.println(a2.nome + " - " + a2.idade);
+
+        // =========================
+        // EXERCÍCIO 3
+        // =========================
+        Conta3 c3 = new Conta3();
+        c3.setSaldo(100);
+        System.out.println("Saldo: " + c3.getSaldo());
+
+        // =========================
+        // EXERCÍCIO 4
+        // =========================
+        Calculadora4 calc = new Calculadora4();
+        System.out.println("Soma: " + calc.somar(5, 3));
+
+        // =========================
+        // EXERCÍCIO 5
+        // =========================
+        System.out.println("Maior de idade? " + maiorDeIdade(18));
+
+        // =========================
+        // EXERCÍCIO 6
+        // =========================
+        Carro6 c6 = new Carro6("Toyota", 2020);
+        System.out.println(c6.info());
+
+        // =========================
+        // EXERCÍCIO 7
+        // =========================
+        Pessoa7 p7a = new Pessoa7("Ana");
+        Pessoa7 p7b = new Pessoa7("Carlos", 25);
+
+        // =========================
+        // EXERCÍCIO 8
+        // =========================
+        Produto8 p8 = new Produto8("Celular");
+        System.out.println(p8.nome + " - " + p8.preco);
+
+        // =========================
+        // EXERCÍCIO 9
+        // =========================
+        Aluno9 a9 = new Aluno9();
+        a9.nome = "João";
+        a9.idade = 20;
+        a9.matricula = "123";
+        System.out.println(a9.nome + " - " + a9.idade + " - " + a9.matricula);
+
+        // =========================
+        // EXERCÍCIO 10
+        // =========================
+        Gerente10 g10 = new Gerente10();
+        g10.nome = "Carlos";
+        g10.salario = 3000;
+        g10.bonus = 1000;
+        System.out.println("Salário total: " + g10.salarioTotal());
+
+        // =========================
+        // EXERCÍCIO 11
+        // =========================
+        System.out.println(verificar(7));
+
+        // =========================
+        // EXERCÍCIO 12
+        // =========================
+        Produto12 p12 = new Produto12();
+        p12.setPreco(50);
+        System.out.println(p12.getPreco());
+
+        // =========================
+        // EXERCÍCIO 13
+        // =========================
+        Carro13 c13 = new Carro13("Honda", "Civic");
+        System.out.println(c13.marca + " - " + c13.modelo);
+
+        // =========================
+        // EXERCÍCIO 14
+        // =========================
+        Conta14 c14 = new Conta14();
+        System.out.println("Novo saldo: " + c14.depositar(200));
+
+        // =========================
+        // EXERCÍCIO 15
+        // =========================
+        Produto15 p15 = new Produto15("TV", 2000);
+        p15.aumentarPreco(500);
+        System.out.println("Preço: " + p15.getPreco());
+    }
+
+    // EXERCÍCIO 5
+    static boolean maiorDeIdade(int idade) {
+        return idade >= 18;
+    }
+
+    // EXERCÍCIO 11
+    static String verificar(int num) {
+        return (num % 2 == 0) ? "Par" : "Ímpar";
+    }
+}
+
+// =========================
+// EXERCÍCIO 1
+// =========================
+class Produto1 {
+    String nome;
+    double preco;
+
+    Produto1(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    void exibir() {
+        System.out.println(nome + " - R$" + preco);
+    }
+}
+
+// =========================
+// EXERCÍCIO 2
+// =========================
+class Aluno2 {
+    String nome;
+    int idade;
+
+    Aluno2(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+// =========================
+// EXERCÍCIO 3
+// =========================
+class Conta3 {
+    String titular;
+    private double saldo;
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        if (saldo >= 0) {
+            this.saldo = saldo;
+        }
+    }
+}
+
+// =========================
+// EXERCÍCIO 4
+// =========================
+class Calculadora4 {
+    int somar(int a, int b) {
+        return a + b;
+    }
+}
+
+// =========================
+// EXERCÍCIO 6
+// =========================
+class Carro6 {
+    String marca;
+    int ano;
+
+    Carro6(String marca, int ano) {
+        this.marca = marca;
+        this.ano = ano;
+    }
+
+    String info() {
+        return "Carro: " + marca + " - " + ano;
+    }
+}
+
+// =========================
+// EXERCÍCIO 7
+// =========================
+class Pessoa7 {
+    String nome;
+    int idade;
+
+    Pessoa7(String nome) {
+        this.nome = nome;
+    }
+
+    Pessoa7(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+// =========================
+// EXERCÍCIO 8
+// =========================
+class Produto8 {
+    String nome;
+    double preco;
+
+    Produto8(String nome) {
+        this(nome, 0);
+    }
+
+    Produto8(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}
+
+// =========================
+// EXERCÍCIO 9
+// =========================
+class Pessoa9 {
+    String nome;
+    int idade;
+}
+
+class Aluno9 extends Pessoa9 {
+    String matricula;
+}
+
+// =========================
+// EXERCÍCIO 10
+// =========================
+class Funcionario10 {
+    String nome;
+    double salario;
+}
+
+class Gerente10 extends Funcionario10 {
+    double bonus;
+
+    double salarioTotal() {
+        return salario + bonus;
+    }
+}
+
+// =========================
+// EXERCÍCIO 12
+// =========================
+class Produto12 {
+    private double preco;
+
+    public void setPreco(double preco) {
+        if (preco > 0) {
+            this.preco = preco;
+        }
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+}
+
+// =========================
+// EXERCÍCIO 13
+// =========================
+class Veiculo13 {
+    String marca;
+
+    Veiculo13(String marca) {
+        this.marca = marca;
+    }
+}
+
+class Carro13 extends Veiculo13 {
+    String modelo;
+
+    Carro13(String marca, String modelo) {
+        super(marca);
+        this.modelo = modelo;
+    }
+}
+
+// =========================
+// EXERCÍCIO 14
+// =========================
+class Conta14 {
+    double saldo;
+
+    double depositar(double valor) {
+        saldo += valor;
+        return saldo;
+    }
+}
+
+// =========================
+// EXERCÍCIO 15
+// =========================
+class Produto15 {
+    private String nome;
+    private double preco;
+
+    Produto15(String nome, double preco) {
+        this.nome = nome;
+        if (preco > 0) {
+            this.preco = preco;
+        }
+    }
+
+    void aumentarPreco(double valor) {
+        preco += valor;
+    }
+
+    double getPreco() {
+        return preco;
+    }
+}
